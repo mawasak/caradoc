@@ -42,7 +42,7 @@ let get_obj_ref (x : t) : int * int =
   | _ -> failwith "Internal error: invalid reference"
 
 let compare (x : t) (y : t) : int =
-  Pervasives.compare x y
+  Stdlib.compare x y
 
 
 let to_string (x : t) : string =

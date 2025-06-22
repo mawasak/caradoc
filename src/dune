@@ -1,0 +1,52 @@
+(ocamllex
+  (modules contentlexer)
+)
+
+(ocamllex
+  (modules lexer)
+)
+
+(ocamllex
+  (modules xreflexer)
+)
+
+(ocamllex
+  (modules strictlexer)
+)
+
+
+(menhir
+ (modules contentparser)
+ (flags --dump)
+ (infer true)
+)
+
+(menhir
+ (modules parser)
+ (flags --dump)
+ (infer true)
+)
+
+(menhir
+ (modules xrefparser)
+ (flags --dump)
+ (infer true)
+)
+
+
+(menhir
+ (modules strictparser)
+ (flags --dump)
+ (infer true)
+)
+
+
+(executable
+  (name main)
+  (public_name main.native)
+  (libraries stdlib-shims cryptokit curses )
+  (flags (:standard -w +a-3-4-32..39-44-58-67-69-70 -warn-error +a -strict-sequence )))
+
+ (include_subdirs unqualified)
+
+ 

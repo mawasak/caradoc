@@ -1,4 +1,4 @@
-OCAML_OPTS=-w,+a-3-4-32..39-58,-warn-error,+a,-strict-sequence,-noautolink
+OCAML_OPTS=-w,+a-3-4-32..39-44-58-67-69-70,-warn-error,+a,-strict-sequence,-noautolink
 
 PROGRAM=caradoc
 
